@@ -152,8 +152,8 @@ public class Canvas implements ImageFilter
 		
 		Point p = position.calculate(
 				widthToUse, heightToUse, img.getWidth(), img.getHeight(),
-				0, 0, 0, 0
-		);
+				 position.getinsetLeft(),position.getinsetRight(),
+	        position.getinsetTop(), position.getinsetBottom());
 		
 		BufferedImage finalImage =
 			new BufferedImage(widthToUse, heightToUse, img.getType());
