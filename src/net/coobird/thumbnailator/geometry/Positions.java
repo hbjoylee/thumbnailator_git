@@ -111,7 +111,7 @@ public enum Positions implements Position {
     
     public Point calculate(int enclosingWidth, int enclosingHeight, int width,
         int height, int insetLeft, int insetRight, int insetTop, int insetBottom) {
-      int x = (enclosingWidth / 2) - (width / 2);
+      int x = (enclosingWidth / 2) - (width / 2) + insetLeft;
       int y = insetTop;
       return new Point(x, y);
     }
@@ -213,7 +213,7 @@ public enum Positions implements Position {
     public Point calculate(int enclosingWidth, int enclosingHeight, int width,
         int height, int insetLeft, int insetRight, int insetTop, int insetBottom) {
       int x = insetLeft;
-      int y = (enclosingHeight / 2) - (height / 2);
+      int y = (enclosingHeight / 2) - (height / 2) + insetTop;
       return new Point(x, y);
     }
   },
@@ -262,8 +262,8 @@ public enum Positions implements Position {
     
     public Point calculate(int enclosingWidth, int enclosingHeight, int width,
         int height, int insetLeft, int insetRight, int insetTop, int insetBottom) {
-      int x = (enclosingWidth / 2) - (width / 2);
-      int y = (enclosingHeight / 2) - (height / 2);
+      int x = (enclosingWidth / 2) - (width / 2) + insetLeft;
+      int y = (enclosingHeight / 2) - (height / 2) + insetTop;
       return new Point(x, y);
     }
   },
@@ -314,7 +314,7 @@ public enum Positions implements Position {
     public Point calculate(int enclosingWidth, int enclosingHeight, int width,
         int height, int insetLeft, int insetRight, int insetTop, int insetBottom) {
       int x = enclosingWidth - width - insetRight;
-      int y = (enclosingHeight / 2) - (height / 2);
+      int y = (enclosingHeight / 2) - (height / 2) + insetTop;
       return new Point(x, y);
     }
   },
@@ -413,7 +413,7 @@ public enum Positions implements Position {
     
     public Point calculate(int enclosingWidth, int enclosingHeight, int width,
         int height, int insetLeft, int insetRight, int insetTop, int insetBottom) {
-      int x = (enclosingWidth / 2) - (width / 2);
+      int x = (enclosingWidth / 2) - (width / 2) + insetLeft;
       int y = enclosingHeight - height - insetBottom;
       return new Point(x, y);
     }
